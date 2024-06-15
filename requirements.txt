@@ -1,0 +1,6 @@
+black
+pylint
+flet
+pillow
+qrcode
+pyinstaller
