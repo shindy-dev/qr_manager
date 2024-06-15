@@ -158,4 +158,4 @@ class QRManagerApp:
 
     def run(self):
         '''アプリ実行'''
-        ft.app(target=QRManagerApp().main, assets_dir=self.assets_dir,)
+        ft.app(target=self.__class__().main, assets_dir=self.assets_dir,)
