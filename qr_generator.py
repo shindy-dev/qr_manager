@@ -1,10 +1,12 @@
-import qrcode
-import base64
+'''qr_generator'''
 import io
+import base64
+import qrcode
 import chardet
 
 
 class QRGenerator:
+    '''QR生成部'''
     @staticmethod
     def generate_qr(qr_str: str) -> qrcode.QRCode:
         '''QRコード作成'''
@@ -48,8 +50,8 @@ class QRGenerator:
     def save_file_from_base64(data: str, file_path: str):
         '''base64形式のデータをデコードし、ファイルとして保存'''
         # Decode base64 String Data
-        decodedData = base64.b64decode((data))
+        decoded_data = base64.b64decode((data))
 
         # Write Image from Base64 File
         with open(file_path, 'wb') as f:
-            f.write(decodedData)
+            f.write(decoded_data)

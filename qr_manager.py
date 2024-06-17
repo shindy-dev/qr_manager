@@ -1,9 +1,11 @@
-import flet as ft
+'''qr_manager'''
 import os
+import flet as ft
 from qr_generator import QRGenerator
 
 
 class QRManagerApp:
+    '''アプリ本体'''
     # QRコード最大文字数
     MAX_LENGTH = 500
 
@@ -74,7 +76,8 @@ class QRManagerApp:
 
                     if len(text) > QRManagerApp.MAX_LENGTH:
                         text = text[:QRManagerApp.MAX_LENGTH]
-                        self.ref_file_errlabel.current.value = f'This file is more than {QRManagerApp.MAX_LENGTH} chars.'
+                        self.ref_file_errlabel.current.value = f'This file is more than {
+                            QRManagerApp.MAX_LENGTH} chars.'
                         self.ref_file_errlabel.current.visible = True
 
                 self.ref_file_contents.current.value = text
@@ -88,6 +91,7 @@ class QRManagerApp:
             self.show_snack_bar('Failed to generate.')
 
     def main(self, page: ft.Page):
+        '''メイン処理'''
         # ページ初期設定
         self.initialize_page(page)
 

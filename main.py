@@ -1,3 +1,4 @@
+'''main'''
 from qr_manager import QRManagerApp
 
 # パッケージングコマンド
